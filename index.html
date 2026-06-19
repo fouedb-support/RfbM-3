@@ -9,7 +9,6 @@
 <title>Radio fouedb Music</title>
 
 <link rel="shortcut icon" href="https://radiofouedbmusic.weebly.com/uploads/2/7/3/9/27392993/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 <link rel="stylesheet" href="https://radiofouedbmusic.weebly.com/uploads/2/7/3/9/27392993/base-rfbm-3-v3.css?4.6.12">
 
@@ -22,8 +21,15 @@
 
     <div class="player">
 
-    <!-- Toast Notification -->
+    <!-- Toast -->
     <div id="toast"></div>
+
+    <!-- Etat réseau -->
+    <div id="networkStatus" class="network-online">
+
+        ● CONNECTED
+
+    </div>
 
     <!-- Album -->
     <div class="album-art">
@@ -32,50 +38,76 @@
             id="cover"
             class="songimg"
             src="https://radiofouedbmusic.weebly.com/uploads/2/7/3/9/27392993/noalbum-white.png"
-            alt="Album Art">
+            alt="Album">
 
     </div>
 
-    <!-- Metadata -->
+    <!-- Informations -->
     <div class="meta">
 
-    <div id="title" class="title">
-        Chargement...
-    </div>
+    <div
+        id="title"
+        class="title">
 
-    <div id="artist" class="artist">
-    </div>
-
-    <div id="album" class="album">
-    </div>
+            Loading...
 
     </div>
 
-    <!-- Progress -->
+    <div
+        id="artist"
+        class="artist">
+
+    </div>
+
+    <div
+        id="album"
+        class="album">
+
+    </div>
+
+    </div>
+
+    <!-- Progression -->
     <div class="progress-container">
 
     <div id="progressBar"></div>
 
     </div>
 
-    <!-- Timer -->
+    <!-- Temps -->
+
     <div class="timer">
 
         <span id="elapsed">
+
             00:00
+
         </span>
 
         <span class="separator">
+
             /
+
         </span>
 
         <span id="duration">
+
             00:00
+
+        </span>
+
+        <span
+            id="remaining"
+            class="remaining">
+
+            (-00:00)
+
         </span>
 
     </div>
 
-    <!-- LIVE + Codec -->
+    <!-- Live -->
+
     <div class="stream-info">
 
     <div class="live-badge">
@@ -88,13 +120,14 @@
 
     <div id="codecInfo">
 
-            MP3 • 320 kbps
+            M4A • 320 kbps
 
     </div>
 
     </div>
 
-    <!-- Quality -->
+    <!-- Formats -->
+
     <div class="quality-switch">
 
         <button
@@ -112,7 +145,7 @@
             AAC
 
         </button>
-        
+
         <button
             id="m4aBtn"
             class="quality-btn">
@@ -123,8 +156,11 @@
 
     </div>
 
-    <!-- Controls -->
+    <!-- Contrôles -->
+
     <div class="controls">
+
+    <!-- Play / Pause -->
 
         <button
             id="playBtn"
@@ -132,20 +168,24 @@
 
         <img
             id="playIcon"
-            src="https://radiofouedbmusic.weebly.com/uploads/2/7/3/9/27392993/play-rfbm.png"
+                src="https://radiofouedbmusic.weebly.com/uploads/2/7/3/9/27392993/play-rfbm.png"
             alt="Play">
 
-    </button>
+        </button>
 
-    <button
-        id="stopBtn"
-        class="control-btn stop">
+    <!-- Stop -->
+
+        <button
+            id="stopBtn"
+            class="control-btn stop">
 
         <img
             src="https://radiofouedbmusic.weebly.com/uploads/2/7/3/9/27392993/stop-rfbm.png"
-            alt="Stop">
+         alt="Stop">
 
-    </button>
+        </button>
+
+    <!-- Mute -->
 
         <button
             id="muteBtn"
@@ -153,14 +193,28 @@
 
         <img
             id="muteIcon"
-            src="https://radiofouedbmusic.weebly.com/uploads/2/7/3/9/27392993/volume-rfbm.png"
+                src="https://radiofouedbmusic.weebly.com/uploads/2/7/3/9/27392993/volume-rfbm.png"
             alt="Volume">
+
+        </button>
+
+    <!-- Reconnect -->
+
+        <button
+            id="refreshBtn"
+            class="control-btn refresh">
+
+        <img
+            id="refreshIcon"
+            src="https://radiofouedbmusic.weebly.com/uploads/2/7/3/9/27392993/refresh-rfbm.png"
+            alt="Reconnect">
 
         </button>
 
     </div>
 
     <!-- Volume -->
+
     <div class="volume-container">
 
         <i class="fas fa-volume-up"></i>
